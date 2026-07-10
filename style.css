@@ -310,112 +310,37 @@ margin:15px;
 
 
 
-button{
+const area = document.getElementById("gears");
 
 
-padding:15px 40px;
+for(let i=0;i<40;i++){
 
 
-border:none;
+let gear=document.createElement("div");
 
 
-border-radius:50px;
+gear.className="gear";
 
 
-background:#ff5722;
+gear.innerHTML="⚙";
 
 
-color:white;
+gear.style.left=Math.random()*100+"%";
 
 
-font-size:18px;
+gear.style.animationDuration=
+(5+Math.random()*10)+"s";
 
 
-cursor:pointer;
+gear.style.animationDelay=
+Math.random()*10+"s";
 
 
-box-shadow:
+gear.style.fontSize=
+(20+Math.random()*60)+"px";
 
-0 10px 25px rgba(255,87,34,.5);
 
-
-transition:.3s;
-
-
-}
-
-
-
-button:hover{
-
-
-transform:scale(1.1);
-
-
-background:#ff9800;
-
-
-}
-
-
-
-
-
-
-
-
-/* เฟือง */
-
-
-.gear{
-
-
-position:fixed;
-
-
-top:-100px;
-
-
-font-size:50px;
-
-
-color:white;
-
-
-opacity:.25;
-
-
-z-index:-1;
-
-
-animation:fall linear infinite;
-
-
-}
-
-
-
-
-
-@keyframes fall{
-
-
-from{
-
-transform:
-translateY(-100px)
-rotate(0deg);
-
-}
-
-
-to{
-
-transform:
-translateY(110vh)
-rotate(720deg);
-
-}
+area.appendChild(gear);
 
 
 }
